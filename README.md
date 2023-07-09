@@ -13,7 +13,7 @@ url = "http://mirrors.ustc.edu.cn/anthon/"
 will redirect `///anthon////114514` to `http://mirrors.ustc.edu.cn/anthon/114514`.
 
 
-2. Change `port=80` in line 33 if you want to use another port.
+2. noticed `port = int(os.environ.get('PORT', 80)) ` if you want to use another port.
 
 3. 
 

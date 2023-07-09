@@ -3,6 +3,7 @@ import http.server
 import socketserver
 import configparser
 from urllib.parse import urlparse, urljoin
+import os
 class RedirectHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         parsed_path = self.path[1:]  # Remove the leading slash from the requested path
@@ -30,7 +31,7 @@ class RedirectHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b'404 Not Found')
 
 def run_server():
-    port = 80
+    port = int(os.environ.get('PORT', 80)) 
     handler = RedirectHandler
 
     with socketserver.TCPServer(("", port), handler) as httpd:
