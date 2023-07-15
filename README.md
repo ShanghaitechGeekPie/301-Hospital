@@ -7,7 +7,7 @@ For example,
 ```ini
 [Redirect]
 path = anthon
-url = "http://mirrors.ustc.edu.cn/anthon/"
+url = http://mirrors.ustc.edu.cn/anthon/
 ```
 
 will redirect `///anthon////114514` to `http://mirrors.ustc.edu.cn/anthon/114514`.
